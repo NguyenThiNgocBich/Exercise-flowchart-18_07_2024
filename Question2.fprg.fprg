@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ngocb"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-19 02:12:49 PM"/>
+        <attribute name="created" value="bmdvY2I7REVTS1RPUC1DOE8xNVZMOzIwMjQtMDctMTk7MTA6MTY6MDggQU07Mjg0MA=="/>
+        <attribute name="edited" value="bmdvY2I7REVTS1RPUC1DOE8xNVZMOzIwMjQtMDctMTk7MDI6MTI6NDkgUE07MjsyOTY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="i, sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random(9)"/>
+                <if expression="a[i]%2!=0">
+                    <then>
+                        <assign variable="sum" expression="sum + a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <output expression="&quot;sum in:&quot; &amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
