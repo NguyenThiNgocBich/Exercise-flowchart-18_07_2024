@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ngocb"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-23 03:42:49 PM"/>
+        <attribute name="created" value="bmdvY2I7REVTS1RPUC1DOE8xNVZMOzIwMjQtMDctMjM7MDk6NTQ6MDggQU07Mjg0NQ=="/>
+        <attribute name="edited" value="bmdvY2I7REVTS1RPUC1DOE8xNVZMOzIwMjQtMDctMjM7MDM6NDI6NDkgUE07MjsyOTY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <declare name="i, sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="Random(9)"/>
+                <if expression="isPrime(a[i]) = true">
+                    <then>
+                        <output expression="a[i]" newline="True"/>
+                        <assign variable="sum" expression="sum + a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Sum is&quot; &amp; Sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
