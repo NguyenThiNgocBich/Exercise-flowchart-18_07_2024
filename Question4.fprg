@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ngocb"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-25 11:10:01 AM"/>
+        <attribute name="created" value="bmdvY2I7REVTS1RPUC1DOE8xNVZMOzIwMjQtMDctMjU7MDk6Mzc6MDcgQU07Mjg0Nw=="/>
+        <attribute name="edited" value="bmdvY2I7REVTS1RPUC1DOE8xNVZMOzIwMjQtMDctMjU7MTE6MTA6MDEgQU07MTsyOTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, min, max" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="max" expression="0"/>
+            <assign variable="min" expression="100"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random(9)"/>
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="max &lt; a[i]">
+                    <then>
+                        <assign variable="max" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="min &gt; a[i]">
+                    <then>
+                        <assign variable="min" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Max: &quot;&amp;Max&amp;&#13;&#10;&quot;Min: &quot;&amp;Min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
